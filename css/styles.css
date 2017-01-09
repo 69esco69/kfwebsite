@@ -414,15 +414,3 @@ textarea {
 a {
   text-decoration: none;
 }
-
-.container {
-  width: 400px;
-  height: 400px;
-  background: red;
-}
-
-.box {
-  width: 300px;
-  height: 500px;
-  background: green;
-}
