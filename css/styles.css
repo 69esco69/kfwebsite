@@ -413,7 +413,5 @@ a {
 }
 
 .container {
-  width: 200px;
-  height: 400px;
-  background: red;
+  background: #e9e9e9;
 }
