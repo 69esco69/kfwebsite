@@ -588,7 +588,7 @@ section.hero header {
 
 @media (max-width: 750px) {
   section.hero {
-    height: 60vh;
+    height: 80vh;
   }
   section.hero .logo {
     height: 50px;
