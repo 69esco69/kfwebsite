@@ -1,0 +1,111 @@
+section.hero
+  background:
+    image: url(../img/hero-bg.jpg)
+  width: 100%
+  height: 80vh
+  color: $white
+  padding: 50px 0px 0px
+  position: relative
+  header
+    +space
+.logo
+  display: inline-block
+  background: $black
+  color: $white
+  +size(80px)
+  +center
+  border-radius: 50%
+  box-shadow: 0px 4px 15px rgba(white, 0.3)
+  font:
+    size: 30px
+    family: 'Monoton', cursive
+
+.navigation a
+  color: white
+  display: inline-block
+  margin-left: 20px
+  text-transform: uppercase
+  letter-spacing: 1px
+  font:
+    size: 18px
+    family: 'Playfair Display', cursive
+  &.active
+    color: $yellow
+.menu
+  font-size: 30px
+  display: none
+//styling content
+.content
+  position: absolute
+  top: 100%
+  font-family: 'Raleway', sans-serif
+  transition: all ease-in-out 500ms
+  overflow: hidden
+  &.move
+    top: 30%
+  .intro
+    margin: 0
+    padding: 0
+    line-height: 1
+    font-size: 100px
+    span
+      display: block
+  .job-title
+    font-size: 40px
+    margin: 20px 0px 0px
+    paddin: 0
+    letter-spacing: 2px
+  .button
+    display: inline-block
+    margin-top: 50px
+    background:  rgba($yellow, 0.7)
+    animation: attention ease-in-out 5s forwards infinite
+    transform: translateX(100px)
+    opacity: 0
+    &.show-it
+      transform: translateX(0px)
+      opacity: 1
+    @keyframes attention
+      0%
+        background: rgba($yellow, 1)
+      50%
+        background: rgba($yellow, 0.5)
+      100%
+        background: rgba($yellow, 1)
+    color: white
+    font:
+      size: 20px
+      weight: 700
+    text-transform: uppercase
+    letter-spacing: 2px
+    border-radius: 5px
+    border: 4px solid $yellow
+    padding: 20px 50px
+    cursor: pointer
+    transition: all ease-in-out 300ms
+    &:hover
+      background: $yellow
+      box-shadow: 0px 3px 15px rgba(white, 0.4)
+      border: 4px solid white
+//media queries
+@media (max-width: 750px)
+  section.hero
+    height: 60vh
+    .logo
+      +size(50px)
+      font-size: 18px
+    .navigation
+      display: none
+    .menu
+      display: block
+    .content
+      .intro
+        font-size: 60px
+      .job-title
+        font-size: 20px
+        span
+          display: block
+          margin-top: 5px
+      .button
+        font-size: 14px
+        padding: 10px 30px

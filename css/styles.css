@@ -3,7 +3,7 @@
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("https://fonts.googleapis.com/css?family=Monoton");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:700");
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700,900");
 html {
@@ -413,4 +413,206 @@ textarea {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 1400px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+section.hero {
+  background-image: url(../img/hero-bg.jpg);
+  width: 100%;
+  height: 80vh;
+  color: #fff;
+  padding: 50px 0px 0px;
+  position: relative;
+}
+
+section.hero header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+
+.logo {
+  display: inline-block;
+  background: #232223;
+  color: #fff;
+  height: 80px;
+  width: 80px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  border-radius: 50%;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+  font-size: 30px;
+  font-family: 'Monoton', cursive;
+}
+
+.navigation a {
+  color: white;
+  display: inline-block;
+  margin-left: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-family: 'Playfair Display', cursive;
+}
+
+.navigation a.active {
+  color: #eb961d;
+}
+
+.menu {
+  font-size: 30px;
+  display: none;
+}
+
+.content {
+  position: absolute;
+  top: 100%;
+  font-family: 'Raleway', sans-serif;
+  transition: all ease-in-out 500ms;
+  overflow: hidden;
+}
+
+.content.move {
+  top: 30%;
+}
+
+.content .intro {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 100px;
+}
+
+.content .intro span {
+  display: block;
+}
+
+.content .job-title {
+  font-size: 40px;
+  margin: 20px 0px 0px;
+  paddin: 0;
+  letter-spacing: 2px;
+}
+
+.content .button {
+  display: inline-block;
+  margin-top: 50px;
+  background: rgba(235, 150, 29, 0.7);
+  animation: attention ease-in-out 5s forwards infinite;
+  transform: translateX(100px);
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  border: 4px solid #eb961d;
+  padding: 20px 50px;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+
+.content .button.show-it {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+@keyframes attention {
+  0% {
+    background: #eb961d;
+  }
+  50% {
+    background: rgba(235, 150, 29, 0.5);
+  }
+  100% {
+    background: #eb961d;
+  }
+}
+
+.content .button:hover {
+  background: #eb961d;
+  box-shadow: 0px 3px 15px rgba(255, 255, 255, 0.4);
+  border: 4px solid white;
+}
+
+@media (max-width: 750px) {
+  section.hero {
+    height: 60vh;
+  }
+  section.hero .logo {
+    height: 50px;
+    width: 50px;
+    font-size: 18px;
+  }
+  section.hero .navigation {
+    display: none;
+  }
+  section.hero .menu {
+    display: block;
+  }
+  section.hero .content .intro {
+    font-size: 60px;
+  }
+  section.hero .content .job-title {
+    font-size: 20px;
+  }
+  section.hero .content .job-title span {
+    display: block;
+    margin-top: 5px;
+  }
+  section.hero .content .button {
+    font-size: 14px;
+    padding: 10px 30px;
+  }
 }
