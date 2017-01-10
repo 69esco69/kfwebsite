@@ -411,6 +411,10 @@ textarea {
   box-sizing: border-box;
 }
 
+body {
+  background: #e9e9e9;
+}
+
 a {
   text-decoration: none;
 }
@@ -425,6 +429,7 @@ section.hero {
   background-image: url(../img/hero-bg.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   width: 100%;
   height: 700px;
   color: #fff;
@@ -616,6 +621,153 @@ section.hero header {
   }
 }
 
-body {
-  background: pink;
+section.about {
+  position: relative;
+  height: 700px;
+  padding-top: 50px;
+}
+
+section.about .container {
+  position: relative;
+}
+
+section.about hr {
+  margin-left: 80px;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+  width: 600px;
+  text-align: center;
+  padding: 30px 50px;
+  position: absolute;
+  top: -150px;
+  right: 0px;
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: all ease-in-out 500ms;
+}
+
+.card.show-it {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.card img {
+  height: 150px;
+  width: 150px;
+}
+
+.card .text {
+  font-size: 18px;
+  color: #5e617e;
+  line-height: 1.5;
+  margin: 20px 0px;
+  position: relative;
+}
+
+.card .text a {
+  color: #eb961d;
+}
+
+.card .text span.q-mark {
+  margin-right: 10px;
+  color: #5e617e;
+  position: absolute;
+  top: 0;
+  font-size: 30px;
+  left: -30px;
+}
+
+.card .text span.q-mark:last-child {
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: -30px;
+}
+
+.card .more {
+  display: inline-block;
+  padding: 15px 20px;
+  background: #eb961d;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.title {
+  font-size: 80px;
+}
+
+.title span {
+  display: block;
+}
+
+hr {
+  width: 200px;
+  display: inline-block;
+  height: 6px;
+  background: #eb961d;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  section.about .title {
+    font-size: 40px;
+    text-align: center;
+  }
+  section.about .title span {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  section.about hr {
+    display: block;
+    margin: 30px auto 0;
+    width: 80px;
+  }
+  section.about .card {
+    position: relative;
+    top: auto;
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  section.about {
+    padding: 20px 0px;
+  }
+  section.about .title {
+    font-size: 30px;
+  }
+  section.about .card {
+    padding: 0px;
+  }
+  section.about hr {
+    width: 50px;
+    margin: 10px auto;
+  }
+  section.about img {
+    height: 100px;
+    width: 100px;
+  }
+  section.about .text {
+    font-size: 16px;
+    margin: 10px 0px;
+  }
+  section.about .text .q-mark {
+    font-size: 16px;
+    position: relative;
+    left: auto;
+  }
+  section.about .text .q-mark:last-child {
+    right: auto;
+    margin-left: 10px;
+  }
+  section.about .more {
+    font-size: 14px;
+  }
 }

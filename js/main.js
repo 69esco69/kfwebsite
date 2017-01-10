@@ -9,6 +9,7 @@ function introStuff() {
   $('.content').addClass('move');
   setTimeout(function(){
   $('.button').addClass('show-it');
+  $('.card').addClass('show-it');
 }, 400);
 
 }
