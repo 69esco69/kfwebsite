@@ -430,6 +430,7 @@ section.hero {
   color: #fff;
   padding: 50px 0px 0px;
   position: relative;
+  overflow: hidden;
 }
 
 section.hero header {
@@ -613,4 +614,8 @@ section.hero header {
     font-size: 14px;
     padding: 10px 30px;
   }
+}
+
+body {
+  background: pink;
 }
