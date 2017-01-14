@@ -1,7 +1,6 @@
 section.about
   position: relative
-  height: 700px
-  padding-top: 50px
+  padding: 50px 0px
   .container
     position: relative
   hr
@@ -11,6 +10,7 @@ section.about
   background: $white
   box-shadow: 0px 6px 20px rgba(black, 0.4)
   width: 600px
+  border-radius: 10px
   text-align: center
   padding: 30px 50px
   position: absolute
@@ -76,27 +76,28 @@ hr
       margin: 30px auto 0
       width: 80px
     .card
-      position: relative
-      top: auto
-      background: transparent
-      box-shadow: none
       width: 100%
+      position: relative
+      background: transparent
+      top: auto
+      box-shadow: none
       margin-top: 10px
-@media (max-width: 400px)
+@media (max-width: 450px)
   section.about
     padding: 20px 0px
     .title
-      font-size: 30px
+      font-size: 25px
     .card
       padding: 0px
     hr
       width: 50px
-      margin: 10px auto
+      height: 4px
+      margin: 10px auto 20px
     img
-      +size(100px)
+      +size(80px)
     .text
-      font-size: 16px
-      margin: 10px 0px
+      font-size: 14px
+      margin: 10px 0px 0px
       .q-mark
         font-size: 16px
         position: relative
@@ -105,4 +106,6 @@ hr
           right: auto
           margin-left: 10px
     .more
-      font-size: 14px
+      font-size: 12px
+      padding: 10px
+      margin: 5px 0px

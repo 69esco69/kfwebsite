@@ -1,0 +1,18 @@
+mixin test-unit(name, title, work)
+  .test-unit
+    .face
+    .name #{name}
+    .job-title #{title}
+      span #{work}
+    .info  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis ducimus numquam vero ea praesentium molestiae est deserunt, sint id fugiat hic facere, repudiandae, amet itaque mollitia quasi non sed. Inventore.
+
+
+section.testimonial
+  .container
+    .title Testimonial
+    hr
+    .test-wrapper
+      +test-unit('Donald Trump', 'President', 'USA')
+      +test-unit('Rex Tillerson','Secretary of State', 'USA' )
+      +test-unit('Barack Obama','Former President', 'USA')
+      +test-unit('Vladimir Putin', 'President', 'RUSIA')

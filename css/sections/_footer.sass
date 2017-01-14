@@ -1,0 +1,36 @@
+section.footer
+  background: $yellow
+  padding: 80px 0px
+  .container
+    +display(flex)
+    +justify-content(space-between)
+    font-size: 40px
+    color: white
+    .email
+      color: white
+      letter-spacing: 2px
+    .social
+      a
+        color: white
+      i
+        margin-left: 20px
+@media (max-width: 960px)
+  section.footer
+    padding: 40px 0px
+    .container
+      display: block
+      text-align: center
+      font-size: 30px
+      .email
+        display: inline-block
+        margin-bottom: 15px
+@media (max-width: 450px)
+  section.footer
+    padding: 20px 0px
+    .container
+      .email
+        font-size: 18px
+        margin-bottom: 5px
+      .social
+        i
+          font-size: 18px
